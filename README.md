@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frutiger Aero Store 🍏✨
 
-## Getting Started
+Магазин у стилі **Frutiger Aero**, створений на Node.js, що поєднує естетику 2000-х з сучасними технологіями. Проєкт демонструє, як виглядала б електронна комерція в епоху Windows XP, Aero Glass та Palm OS.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Мета проекту
+
+Розробити естетично унікальний та технічно якісний онлайн-магазин з повним стеком на **Node.js**, який демонструє концепцію “Frutiger Aero commerce” — поєднання прозорих UI-елементів, світлових відблисків і неону.
+
+---
+
+## 🛠️ Технології
+
+- **Node.js** — бекенд основи
+- **Express.js** — маршрутизація і API
+- **MongoDB** — база даних для товарів, користувачів і замовлень
+- **Mongoose** — ORM для роботи з MongoDB
+- **EJS / React** — шаблонізатор або фронтенд (в залежності від версії)
+- **Prettier + ESLint** — перевірка стилю коду
+- **Git Hooks (Husky)** — автоматична перевірка перед комітом
+
+---
+
+## 🧩 Структура проекту
+
+```
+frutiger-aero-store/
+├── src/
+│   ├── config/          # Налаштування (dotenv, db)
+│   ├── controllers/     # Логіка роботи з даними
+│   ├── models/          # Mongoose-схеми
+│   ├── routes/          # Express-маршрути
+│   ├── views/           # EJS шаблони (якщо використовується)
+│   └── public/          # Статичні файли (зображення, css, js)
+├── tests/               # Юніт і інтеграційні тести
+├── .eslintrc.js         # Лінтер
+├── .prettierrc          # Форматування
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Встановлення
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/markshustorovych/Kursova_IPZ.git
+cd Kursova_IPZ
+npm install
+npm run dev
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 💾 Основні модулі
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Модуль | Опис |
+|--------|------|
+| `products` | Зберігає інформацію про товари |
+| `users` | Облікові записи користувачів |
+| `cart` | Обробка кошика |
+| `orders` | Створення і збереження замовлень |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🌐 API приклади
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+GET /api/products
+POST /api/cart/add
+GET /api/orders/:id
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🧪 Тестування
+
+Проєкт містить приклади юніт-тестів для контролерів.
+
+```bash
+npm run test
+```
+
+Для мутаційного тестування рекомендується **Stryker Mutator**.
+
+---
+
+## 🚧 CI/CD
+
+Рекомендовано використовувати **GitHub Actions** для автоматичного:
+- лінтингу
+- тестування
+- деплою на staging
+
+---
+
+## 🧠 Ідея дизайну
+
+Frutiger Aero — це ностальгійна естетика 2000-х з глянцевими елементами, неоновими відтінками і бликами світла. Основні риси UI:
+- скляні кнопки з відблисками
+- пастельні градієнти
+- ефект “liquid light”
+- мінімалізм без flat-дизайну
+
+---
+
+## 📈 Подальші кроки
+
+- Підключення PayPal або Stripe API
+- Оптимізація Lighthouse-показників
+- Додавання PWA підтримки
+- Винос бізнес-логіки в окремий npm пакет
+
+---
+
+## 👨‍💻 Автор
+
+**Mark Shustorovych**  
+GitHub: [@markshustorovych](https://github.com/markshustorovych)
